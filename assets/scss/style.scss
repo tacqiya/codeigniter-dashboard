@@ -1,0 +1,255 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 29-Dec-2015, 08:38:07
+    Author     : User
+*/
+
+::-webkit-scrollbar {
+	width: 5px;
+	height: 5px;
+}
+::-webkit-scrollbar-track {
+	background-color: #ccc;
+	border-left: 1px solid #fff;
+}
+::-webkit-scrollbar-thumb {
+	background-color: #2059a8;
+}
+::-webkit-scrollbar-thumb:hover {
+	background-color: #fff;
+}
+
+@import "config";
+
+body {
+	background: #fff;
+	max-width: 2000px;
+	font-family: $font_3;
+	font-size: 14px;
+	overflow-x: hidden;
+	margin-left: auto;
+	margin-right: auto;
+
+	* {
+		/*border: 1px solid red;*/
+	}
+}
+html,
+body {
+	/*min-width: 1141px;*/
+	scroll-behavior: smooth;
+}
+
+.hide {
+	display: none;
+}
+
+p {
+	line-height: 25px;
+}
+
+.left {
+	float: left;
+}
+
+.abs-left {
+	left: 0;
+}
+
+.right {
+	float: right;
+}
+.abs-right {
+	right: 0;
+}
+
+.rtl {
+	direction: rtl;
+}
+
+.clear:after {
+	clear: both;
+	display: block;
+	content: " ";
+}
+
+.p-relative {
+	position: relative;
+}
+.p-absolute {
+	position: absolute;
+}
+
+.v-center {
+	top: 50%;
+	transform: translateY(-50%);
+}
+.h-center {
+	left: 50%;
+	transform: translateX(-50%);
+}
+.v-h-center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+.clear-float {
+	display: block;
+	clear: both;
+	height: 1px;
+}
+
+br.minus {
+	margin-bottom: -20px;
+	display: block;
+	content: "";
+}
+
+.wrapper {
+	width: $wrapper_width;
+	margin: 0 auto;
+	position: relative;
+}
+
+.title-b {
+	display: block;
+}
+
+.margin-zero {
+	margin: 0 !important;
+}
+.margin-top-zero {
+	margin-top: 0 !important;
+}
+.margin-bottom-zero {
+	margin-bottom: 0 !important;
+}
+
+br {
+	&.px-10 {
+		content: " ";
+		display: block;
+		margin: 10px 0 0;
+		line-height: 10px;
+	}
+	&.px-20 {
+		content: " ";
+		display: block;
+		margin: 20px 0 0;
+		line-height: 20px;
+	}
+	&.px-30 {
+		content: " ";
+		display: block;
+		margin: 30px 0 0;
+		line-height: 30px;
+	}
+	&.px-40 {
+		content: " ";
+		display: block;
+		margin: 40px 0 0;
+		line-height: 40px;
+	}
+	&.px-50 {
+		content: " ";
+		display: block;
+		margin: 50px 0 0;
+		line-height: 50px;
+	}
+	&.px-60 {
+		content: " ";
+		display: block;
+		margin: 60px 0 0;
+		line-height: 60px;
+	}
+	&.px-70 {
+		content: " ";
+		display: block;
+		margin: 70px 0 0;
+		line-height: 70px;
+	}
+	&.px-80 {
+		content: " ";
+		display: block;
+		margin: 80px 0 0;
+		line-height: 80px;
+	}
+	&.px-90 {
+		content: " ";
+		display: block;
+		margin: 90px 0 0;
+		line-height: 90px;
+	}
+	&.px-100 {
+		content: " ";
+		display: block;
+		margin: 100px 0 0;
+		line-height: 100px;
+	}
+	&.px-10-minus {
+		content: " ";
+		display: block;
+		margin: -10px 0 0;
+		line-height: 0px;
+	}
+	&.px-20-minus {
+		content: " ";
+		display: block;
+		margin: -20px 0 0;
+		line-height: 0px;
+	}
+	&.px-30-minus {
+		content: " ";
+		display: block;
+		margin: -30px 0 0;
+		line-height: 0px;
+	}
+	&.px-40-minus {
+		content: " ";
+		display: block;
+		margin: -40px 0 0;
+		line-height: 0px;
+	}
+	&.px-50-minus {
+		content: " ";
+		display: block;
+		margin: -50px 0 0;
+		line-height: 0px;
+	}
+	&.px-60-minus {
+		content: " ";
+		display: block;
+		margin: -60px 0 0;
+		line-height: 0px;
+	}
+}
+
+.common-a {
+}
+
+.common-title {
+	font-size: 30px;
+	font-weight: bold;
+	padding-bottom: 10px;
+	text-transform: uppercase;
+	position: relative;
+	margin-bottom: 30px;
+
+	&:after {
+		content: "";
+		bottom: 0;
+		left: 0;
+		position: absolute;
+		width: 60px;
+		height: 5px;
+		background: $main_clr;
+	}
+}
+
+

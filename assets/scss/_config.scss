@@ -1,0 +1,93 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 13-May-2017, 13:04:39
+    Author     : Mansaf Jafran
+*/
+
+@import 'fonts';
+
+$clr_black : black;
+$clr_white : white; 
+$main_clr : #122a89;
+$sub_clr: #0eb5d3;
+$wrapper_width : 1141px;
+
+$font_1 : 'Raleway', sans-serif;
+$font_2 : 'Open Sans', sans-serif;
+$font_3 : 'Montserrat', sans-serif;
+$font_4 : 'PT Sans', sans-serif;
+$font_5 : 'Alegreya', sans-serif;
+
+@mixin clearfix{
+    &:after{
+        clear: both;
+        display: block;
+        content: ' '; 
+    }
+}
+
+@mixin v-h-center{ 
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+@mixin v-center{
+    top: 50%;
+    transform: translateY(-50%);
+}
+@mixin h-center{
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@mixin delay($val){
+    transition: $val all;
+    -webkit-transition: $val all;
+}
+
+@mixin animation($name,$time,$delay, $method){
+    -webkit-animation-name: $name; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: $time; /* Safari 4.0 - 8.0 */
+    -webkit-animation-delay: $delay;
+    animation-name: $name;
+    animation-duration: $time;
+    animation-delay: $delay;
+    animation-fill-mode: $method;
+    -webkit-animation-fill-mode: $method;
+}
+
+@mixin placeholder {    
+    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        @content;
+    } 
+    ::-moz-placeholder { /* Firefox 19+ */
+        @content;
+    }
+    :-ms-input-placeholder { /* IE 10+ */
+        @content;
+    }
+    :-moz-placeholder { /* Firefox 18- */
+        @content;
+    }
+}
+
+@mixin opacityAnimation(){
+    opacity: .8;
+    @include delay(.2s);
+    &:hover{
+        opacity: 1;
+    }
+}
+@mixin opacityAnimation2(){
+    opacity: 1;
+    @include delay(.2s);
+    &:hover{
+        opacity: .8;
+    }
+}
+
