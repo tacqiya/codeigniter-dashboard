@@ -87,4 +87,4 @@ defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest auto
 define('TIME_ZONE', 'Asia/Dubai');
 define('TIME_ZONE_IN_UTC', 'UTC+4');
 
-define('TBL_REGISTER', 'asbc_register_2024');
+define('TBL_USERS', 'users');

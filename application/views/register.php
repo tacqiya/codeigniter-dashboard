@@ -34,15 +34,18 @@
                 </div>
                 <h4>New here?</h4>
                 <h6 class="fw-light">Signing up is easy. It only takes a few steps</h6>
-                <form class="pt-3">
+                <?= form_open(base_url('register')); ?><!-- <form class="pt-3"> -->
                   <div class="form-group">
-                    <input type="text" class="form-control form-control-lg" id="exampleInputUsername1" placeholder="Username">
+                    <input type="text" class="form-control form-control-lg" name="username" id="username" placeholder="Username">
+                    <? form_error('username'); ?>
                   </div>
                   <div class="form-group">
-                    <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Email">
+                    <input type="email" class="form-control form-control-lg" name="email" id="email" placeholder="Email">
+                    <? form_error('email'); ?>
                   </div>
                   <div class="form-group">
-                    <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password">
+                    <input type="password" class="form-control form-control-lg" name="password" id="password" placeholder="Password">
+                    <? form_error('password'); ?>
                   </div>
                   <div class="mb-4">
                     <div class="form-check">
@@ -51,11 +54,11 @@
                     </div>
                   </div>
                   <div class="mt-3 d-grid gap-2">
-                    <a class="btn btn-block btn-primary btn-lg fw-medium auth-form-btn" href="<?= base_url() ?>index.html">SIGN UP</a>
+                    <input type="submit" class="btn btn-block btn-primary btn-lg fw-medium auth-form-btn" value="SIGN UP">
                   </div>
                   <div class="text-center mt-4 fw-light"> Already have an account? <a href="<?= base_url('login') ?>" class="text-primary">Login</a>
                   </div>
-                </form>
+                <?= form_close(); ?><!-- </form> -->
               </div>
             </div>
           </div>

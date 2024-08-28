@@ -34,15 +34,15 @@
                 </div>
                 <h4>Hello! let's get started</h4>
                 <h6 class="fw-light">Sign in to continue.</h6>
-                <form class="pt-3">
+                <?= form_open(base_url((($this->input->get('redirect_url')) ? '?redirect_url=' . $this->input->get('redirect_url') : 'login'))); ?><!-- <form class="pt-3"> -->
                   <div class="form-group">
-                    <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Username">
+                    <input type="email" class="form-control form-control-lg" name="email" id="email" placeholder="Username">
                   </div>
                   <div class="form-group">
-                    <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password">
+                    <input type="password" class="form-control form-control-lg" name="password" id="password" placeholder="Password">
                   </div>
                   <div class="mt-3 d-grid gap-2">
-                    <a class="btn btn-block btn-primary btn-lg fw-medium auth-form-btn" href="<?= base_url() ?>index.html">SIGN IN</a>
+                    <input type="submit" class="btn btn-block btn-primary btn-lg fw-medium auth-form-btn" value="SIGN IN">
                   </div>
                   <div class="my-2 d-flex justify-content-between align-items-center">
                     <div class="form-check">
@@ -57,7 +57,7 @@
                   </div>
                   <div class="text-center mt-4 fw-light"> Don't have an account? <a href="<?= base_url('register') ?>" class="text-primary">Create</a>
                   </div>
-                </form>
+                <?= form_close(); ?><!-- </form> -->
               </div>
             </div>
           </div>
